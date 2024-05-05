@@ -13,14 +13,15 @@ authors = [
     "Sean McArthur <sean@seanmonstar.com>",
 ]
 description = "Types and traits for working with bytes"
-repository = "https://github.com/tokio-rs/bytes"
+repository = "https://github.com/rblaze/embedded-bytes"
 readme = "README.md"
 keywords = ["buffers", "zero-copy", "io"]
 categories = ["network-programming", "data-structures"]
 
 [features]
 default = ["std"]
-std = []
+std = ["alloc"]
+alloc = []
 
 [dependencies]
 serde = { version = "1.0.60", optional = true, default-features = false, features = ["alloc"] }

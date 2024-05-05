@@ -3,6 +3,7 @@ use core::mem::{self, ManuallyDrop};
 use core::ops::{Deref, RangeBounds};
 use core::{cmp, fmt, hash, ptr, slice, usize};
 
+#[cfg(feature = "alloc")]
 use alloc::{
     alloc::{dealloc, Layout},
     borrow::Borrow,
